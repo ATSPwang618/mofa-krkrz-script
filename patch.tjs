@@ -1,0 +1,7 @@
+// patch.tjs - PC 散装??器（krkr32.exe）用
+// 游?自身的散装分支只注册 data/<?源目?>/，缺少 sub/（KAG ?脚本都在?里），
+// ?里?上和它 XP3 分支里那句 addAutoPath("sub/") 等价的一?。
+try
+{
+	Storages.addAutoPath(System.exePath + "data/sub/");
+} catch(e) { }
